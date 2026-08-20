@@ -1,0 +1,100 @@
+<html>
+  <div>
+    <h1>This is a site made for learning</h1>
+    <ol>
+      <li>HTML</li>
+      <li>CSS</li>
+      <li>JavaScript/TypeScript</li>
+      <li><a href="#rxjs">RxJS</a></li>
+      <li>Angular</li>
+    </ol>
+  </div>
+
+  <section id="rxjs">
+    <h2>RxJS</h2>
+    <p>
+      The four main things I willl cover: <a href="#operators">Operators</a>,
+      Subjects, Recipents, Concepts
+    </p>
+
+    <section id="operators">
+      <h3>Operators</h3>
+      <p>
+        They are the things behind observables, declarative solution to complex
+        async tasks.
+      </p>
+      <h4>Categories:</h4>
+      <p>
+        <a href="#combination">Combination</a>, Conditional, Creation, Error
+        Handling, Multicasting, Filtering, Transformation, Utility
+      </p>
+
+      <section id="combination">
+        <h4>Combination</h4>
+        <p>Allow joining of information from multiple observables.</p>
+        <ul>
+          <li>combineLatestAll</li>
+          <li>combineLatest</li>
+          <li>concat</li>
+          <li>concatAll</li>
+          <li>endWith</li>
+          <li>forkJoin</li>
+          <li>merge</li>
+          <li>mergeAll</li>
+          <li>pairwise</li>
+          <li>race</li>
+          <li>startWith</li>
+          <li>withLatestFrom</li>
+          <li>zip</li>
+        </ul>
+        <section id="combineLatestAll">
+          <h4>combineLatestAll</h4>
+          <div>
+            <a
+              href="https://rxjs.dev/api/operators/combineLatestAll"
+              target="_blank"
+              >Documentation</a
+            >
+            <a
+              href="https://www.learnrxjs.io/learn-rxjs/operators/combination/combineall"
+              target="_blank"
+              >Example</a
+            >
+          </div>
+
+          <div>
+            <p>
+              combineLatestAll&lt;T&gt;():
+              OperatorFunction&lt;ObservableInput&lt;T&gt;, T[]&gt;
+            </p>
+          </div>
+          <div>
+            <p>Best used when using an observable that emits observables.</p>
+            <p>Waits for all inner observables to emit at least once.</p>
+            <p>
+              If you only need final values when all observables complete, use
+              forkJoin instead.
+            </p>
+            <p>
+              Used for dynamic collection of observables, for example, when you
+              don't know how from the start how many observables will be
+              created, but you know when they finish creating and you want to
+              monitor the latest changes of each observable.
+            </p>
+            <p>
+              In order for combineLatestAll to produce any results two
+              conditions need to be met:
+            </p>
+            <ol>
+              <li>
+                The outer observable must complete, signaling that no more inner
+                observables will be emitted.
+              </li>
+              <li>Every inner observable must have emitted at least once.</li>
+            </ol>
+          </div>
+        </section>
+      </section>
+    </section>
+  </section>
+</html>
