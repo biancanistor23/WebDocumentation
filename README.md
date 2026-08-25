@@ -1,7 +1,6 @@
 # WebDocumentation
 
-### Resources Used:
-> Check out: <br/>
+> Resources Used: <br/>
 https://www.learnrxjs.io/ <br/>
 https://reactivex.io/ <br/>
 https://rxjs.dev/ <br/>
